@@ -106,6 +106,70 @@
       section { padding: 65px 17px; }
       .topbar { top: 12px; right: 12px; }
     }
+    
+/* Favourite Things Section */
+.favourites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.favourite-card {
+  background: #ffffffc9;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 30px 18px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform .35s ease, box-shadow .35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.favourite-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 22px 45px #d88bb855;
+}
+
+.favourite-icon {
+  font-size: 4.5rem;
+  display: block;
+  margin-bottom: 15px;
+  animation: cake-bob 3s ease-in-out infinite;
+}
+
+.favourite-card h3 {
+  font-family: "Playfair Display", serif;
+  color: #a84773;
+  font-size: 1.35rem;
+}
+
+.favourite-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: .92rem;
+}
+
+.favourite-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 7px 13px;
+  background: #fff0f6;
+  color: #b84f7d;
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+@media(max-width:720px) {
+  .favourites-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }
@@ -121,7 +185,7 @@
       photos: [
         { src: "https://kommodo.ai/i/g0YmWgVhMEKi2j8DKhmn", caption: "A memory worth keeping ✨", emoji: "📸" },
         { src: "https://ibb.co/FL377xQv", caption: "Your beautiful smile 😊", emoji: "🌷" },
-        { src: "https://i.ibb.co/tw89t3V0/IMG-20260424-WA0013.jpg", caption: "More happy moments ahead 💕", emoji: "🦋" }
+        { src: "", caption: "More happy moments ahead 💕", emoji: "🦋" }
       ],
       gifts: [
         { title: "A little love note", subtitle: "A tiny reminder just for you", icon: "💌", message: "You make ordinary moments feel special. Never forget how wonderful you are. 💖" },
@@ -182,6 +246,43 @@
         <div class="edit-tip">Tip: replace the empty photo paths in <strong>birthdayConfig.photos</strong> with your image filenames.</div>
       </div>
     </section>
+
+    
+<section id="favourites">
+  <div class="section-inner">
+    <div class="section-heading">
+      <div class="kicker">A little something about you</div>
+      <h2>Your kind of happiness 🍒</h2>
+      <p>Some things are just so YOU. And these are a few of them! 💗</p>
+    </div>
+
+    <div class="favourites-grid">
+
+      <div class="favourite-card">
+        <span class="favourite-icon">🍒</span>
+        <h3>Cranberry Love</h3>
+        <p>A little sweet, a little tangy, and absolutely your vibe!</p>
+        <span class="favourite-tag">Your Favourite ❤️</span>
+      </div>
+
+      <div class="favourite-card">
+        <span class="favourite-icon">☕</span>
+        <h3>Coffee, No Sugar</h3>
+        <p>Pure coffee, no extra sweetness. Just the way you like it!</p>
+        <span class="favourite-tag">Zero Sugar, Full Love</span>
+      </div>
+
+      <div class="favourite-card">
+        <span class="favourite-icon">🍕</span>
+        <h3>Pizza Forever</h3>
+        <p>Because a perfect day is never complete without your favourite pizza!</p>
+        <span class="favourite-tag">Pizza Mood Always</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <section id="gifts">
       <div class="section-inner">
